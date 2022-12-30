@@ -22,7 +22,7 @@
             border-radius: 15px;
             width: 80%;
         }
-        button{
+        button.load{
             outline:none;
             border:1px solid black;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
@@ -31,7 +31,7 @@
             border-radius: 15px;
             background: black;
         }
-        button:hover{
+        button.load:hover{
             background: white;
             color: black;
         }
@@ -44,7 +44,7 @@
     <div>
         <span>Video player with my theme: </span>
         <input id = "url" type = "text" placeholder = "Enter the link: ">
-        <button onclick = "render()">Load</button>
+        <button id = "load" onclick = "render()">Load</button>
     </div>
     <div id = "player"></div>
     <script>
