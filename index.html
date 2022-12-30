@@ -4,16 +4,16 @@
     <title>Video Player theme lib</title>
     <script src = "vidplay.js"></script>
     <style>
-        *{
+        html,body{
             margin:0px;
-            padding:10px;
         }
         body{
             height: 100%;
             display:flex;
             flex-direction: column;
+            gap: 10px;
         }
-        input{
+        input.url{
             outline:none;
             border:none;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
@@ -21,6 +21,7 @@
             color: black;
             border-radius: 15px;
             width: 80%;
+            
         }
         button.load{
             outline:none;
@@ -38,12 +39,17 @@
         span{
             font-family: Arial, Helvetica, sans-serif;
         }
+        #player{
+            flex-grow: 1;
+            margin:5px;
+            height: calc(100%-50px);
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div style = "margin: 5px; height: 50px;">
         <span>Video player with my theme: </span>
-        <input id = "url" type = "text" placeholder = "Enter the link: ">
+        <input class = "url" id = "url" type = "text" placeholder = "Enter the link: ">
         <button class = "load" onclick = "render()">Load</button>
     </div>
     <div id = "player"></div>
